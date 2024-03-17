@@ -36,3 +36,7 @@ To run the Home Nurse Finder locally, follow these steps:
 2. Open `index.html` in your browser.
   No additional setup is required, as all data is contained within the project.
 
+ OR
+ Live Demo
+Experience the Home Nurse Finder in action: https://arathiviju2004.github.io/Tinker-nurses/
+
