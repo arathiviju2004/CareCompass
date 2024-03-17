@@ -76,7 +76,7 @@
     const specializationInput = document.getElementById('specialization').value.toLowerCase();
 
     try {
-        const response = await fetch('./nurses.json'); // Make sure this path is correct!
+        const response = await fetch('nurses.json'); // Make sure this path is correct!
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
