@@ -28,5 +28,11 @@ This project is built with HTML, CSS, and JavaScript, demonstrating a practical 
 
 ## Getting Started
 
+To run the Home Nurse Finder locally, follow these steps:
 
+1. Clone the repository:
+   git clone https://github.com/arathiviju2004/Tinker-nurses.git
+   
+2. Open `index.html` in your browser.
+  No additional setup is required, as all data is contained within the project.
 
