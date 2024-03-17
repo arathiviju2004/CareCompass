@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurse Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: hsl(35, 80%, 70%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 15px;
+            width: fit-content;
+        }
+        #results {
+            margin-top: 20px;
+        }
+        .nurse {
+            border: 1px solid #ddd;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+        }
+        form > * {
+            margin: 10px 0;
+        }
+        input, select, button {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: calc(100% - 20px); /* Adjusts for padding */
+            box-sizing: border-box; /* Makes sure padding doesn't affect width */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Find a Nurse</h2>
+        <form id="searchForm">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location">
+            <br><br>
+            <label for="specialization">Specialization:</label>
+            <select id="specialization" name="specialization">
+                <option value="">Any Specialization</option>
+                <option value="Pediatric Nurse">Pediatric Nurse</option>
+                <option value="Geriatric Nurse">Geriatric Nurse</option>
+                <option value="Surgical Nurse">Surgical Nurse</option>
+                <option value="Emergency Nurse">Emergency Nurse</option>
+            </select>
+            <br><br>
+            <button type="button" onclick="searchNurses()">Search</button>
+        </form>
+        <!-- Results will now appear directly below the search form, within the same container -->
+        <div id="results">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+    <script>
+       async function searchNurses() {
+    const locationInput = document.getElementById('location').value.toLowerCase();
+    const specializationInput = document.getElementById('specialization').value.toLowerCase();
+
+    try {
+        const response = await fetch('/nurses.json'); // Make sure this path is correct!
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const nurses = await response.json();
+
+        const filteredNurses = nurses.filter(nurse => {
+            const matchesLocation = nurse.location.toLowerCase().includes(locationInput);
+            const matchesSpecialization = specializationInput === '' || nurse.specialization.toLowerCase() === specializationInput;
+            return matchesLocation && matchesSpecialization;
+        });
+
+        displayResults(filteredNurses);
+    } catch (error) {
+        console.error('Could not load the nurse data:', error);
+    }
+}
+
+function displayResults(nurses) {
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = ''; // Clear previous results
+
+    if (nurses.length === 0) {
+        resultsDiv.innerHTML = '<p>No nurses found. Please try different search criteria.</p>';
+        return;
+    }
+
+    nurses.forEach(nurse => {
+        const nurseDiv = document.createElement('div');
+        nurseDiv.classList.add('nurse');
+        nurseDiv.innerHTML = `
+            <h3>${nurse.name}</h3>
+            <p>Location: ${nurse.location}</p>
+            <p>Age: ${nurse.age}</p>
+            <p>Specialization: ${nurse.specialization}</p>
+        `;
+        resultsDiv.appendChild(nurseDiv);
+    });
+}
+
+    </script>
+</body>
+</html>
