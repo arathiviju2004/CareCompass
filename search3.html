@@ -107,7 +107,7 @@ function displayResults(nurses) {
         const nurseDiv = document.createElement('div');
         nurseDiv.classList.add('nurse');
         nurseDiv.innerHTML = `
-            <h3>${nurse.name}</h3>
+            <h3><a href="detail.html?id=${nurse.id}">${nurse.name}</a></h3>
             <p>Location: ${nurse.location}</p>
             <p>Age: ${nurse.age}</p>
             <p>Specialization: ${nurse.specialization}</p>

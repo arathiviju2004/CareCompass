@@ -1,27 +1,66 @@
 [
-    {
-      "name": "Jane Doe",
-      "location": "New York",
-      "age": 29,
-      "specialization": "Pediatric Nurse"
-    },
-    {
-      "name": "John Smith",
-      "location": "California",
-      "age": 35,
-      "specialization": "Geriatric Nurse"
-    },
-    {
-      "name": "Emily White",
-      "location": "Texas",
-      "age": 32,
-      "specialization": "Surgical Nurse"
-    },
-    {
-      "name": "Mark Brown",
-      "location": "Florida",
-      "age": 40,
-      "specialization": "Emergency Nurse"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "name": "Jane Doe",
+    "gender": "Female",
+    "location": "New York",
+    "age": 29,
+    "specialization": "Pediatric Nurse",
+    "experience": "10 years",
+    "rating": 4.8,
+    "mobile": "+1234567890",
+    "email": "jane.doe@example.com",
+    "description": "Passionate about providing care for children and helping families navigate through challenging times.",
+    "languages": ["English", "Spanish"],
+    "education": "Bachelor of Science in Nursing",
+    "certifications": ["Pediatric Advanced Life Support (PALS)", "Certified Pediatric Nurse (CPN)"]
+  },
+  {
+    "id": 2,
+    "name": "John Smith",
+    "gender": "Male",
+    "location": "California",
+    "age": 35,
+    "specialization": "Geriatric Nurse",
+    "experience": "8 years",
+    "rating": 4.5,
+    "mobile": "+1987654321",
+    "email": "john.smith@example.com",
+    "description": "Experienced in elderly care with a focus on enhancing quality of life and promoting independence.",
+    "languages": ["English"],
+    "education": "Bachelor of Science in Nursing",
+    "certifications": ["Gerontological Nursing Certification (RN-BC)"]
+  },
+  {
+    "id": 3,
+    "name": "Emily White",
+    "gender": "Female",
+    "location": "Texas",
+    "age": 32,
+    "specialization": "Surgical Nurse",
+    "experience": "12 years",
+    "rating": 4.9,
+    "mobile": "+1122334455",
+    "email": "emily.white@example.com",
+    "description": "Skilled in surgical procedures and patient care, ensuring optimal outcomes and patient satisfaction.",
+    "languages": ["English"],
+    "education": "Master of Science in Nursing",
+    "certifications": ["Certified Medical-Surgical Registered Nurse (CMSRN)", "Advanced Cardiac Life Support (ACLS)"]
+  },
+  {
+    "id": 4,
+    "name": "Mark Brown",
+    "gender": "Male",
+    "location": "Florida",
+    "age": 40,
+    "specialization": "Emergency Nurse",
+    "experience": "15 years",
+    "rating": 4.7,
+    "mobile": "+1555666777",
+    "email": "mark.brown@example.com",
+    "description": "Emergency care expert with extensive experience in handling critical situations and saving lives.",
+    "languages": ["English", "French"],
+    "education": "Doctor of Nursing Practice",
+    "certifications": ["Emergency Nursing Pediatric Course (ENPC)", "Trauma Nursing Core Course (TNCC)"]
+  }
+]

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurse Details</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="details.css"> 
+    <style>
+        /* Inline styles for fallback and troubleshooting */
+        .container {
+            display: flex; /* Use flexbox */
+            align-items: flex-start; /* Align items to the top */
+           
+        }
+       
+        .profile-picture {
+            background-color: #ccc;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            border: 2px solid #161515;
+            margin-right: 20px; /* Add some right margin for spacing */
+            margin-top: 10px; /* Adjust top margin to move it down */
+        }
+
+        #nurseDetails {
+            /* flex-grow: 1;  Remove this line to prevent details from taking up remaining space */
+        }
+    </style>
+</head>
+<body> 
+    <div class="container">
+        <!-- Place the profile picture here, on the left -->
+        <div class="profile-picture"></div>
+        <!-- Nurse details will be displayed here -->
+        <div id="nurseDetails">
+            <h1>Nurse Details</h1>
+            <!-- Nurse details will be displayed here -->
+        </div>
+    </div>
+    <!-- Add any necessary scripts here -->
+    <script src="nurse_details.js"></script>
+</body>
+</html>
