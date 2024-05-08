@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation Page</title>
+    <link rel="stylesheet" href="details.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font family for a more modern look */
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .confirmation-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .tick-mark {
+            width: 150px; /* Medium small size */
+            height: 150px;
+            margin: 20px auto;
+            animation: popIn 0.5s ease-out; /* Animation for pop effect */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .message {
+            font-size: 18px; /* Slightly larger font size */
+            color: #333;
+            margin-top: 10px;
+            animation: fadeIn 2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <img src="img/tick.png" alt="Tick Mark" class="tick-mark"> <!-- Correct the path and include the image as part of the tick-mark class -->
+        <p class="message">Your request is noted. We will contact you as soon as possible.</p>
+    </div>
+</body>
+</html>
