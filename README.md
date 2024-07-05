@@ -37,5 +37,5 @@ To run the Home Nurse Finder locally, follow these steps:
 
  OR
  Live Demo
-Experience the Home Nurse Finder in action: [https://arathiviju2004.github.io/Tinker-nurses/](https://arathiviju2004.github.io/CareCompass/)
+Experience the Home Nurse Finder in action: [CARECOMPASS](https://arathiviju2004.github.io/CareCompass/)
 
